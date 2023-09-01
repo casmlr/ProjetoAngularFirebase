@@ -1,0 +1,61 @@
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-row>
+            <ion-col size="12" size-lg="3">
+              <img alt="Silhouette of mountains"
+                src="https://ateliedocarro.com.br/wp-content/uploads/2019/06/Fusca-1600-76-Amarelo-Imperial-30.jpeg" />
+            </ion-col>
+            <ion-col size="8">
+
+
+              <ion-list>
+                <ion-item>
+                  <ion-label class="titulo">Ovinho</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>cor amarelo</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>R$ 80.000</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>1.9 bi turbo </ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>1959 fabricação</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Motor,pintura,roda</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>1989 Modelo</ion-label>
+                </ion-item>
+              </ion-list>
+              <ion-button (click)="modal.dismiss()" expand="block">Comfirmar compra</ion-button>
+
+
+
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+
+        <ion-modal #modal trigger="open-modal" [canDismiss]="canDismiss" [presentingElement]="presentingElement">
+          <ng-template>
+            <ion-toolbar>
+              <ion-buttons>
+                <ion-button (click)="modal.dismiss()">Comfirmar</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+            <ion-content class="ion-padding">
+
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

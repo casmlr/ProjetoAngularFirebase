@@ -1,0 +1,62 @@
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-row>
+            <ion-col size="12" size-lg="3">
+              <img alt="Silhouette of mountains"
+                src="https://i.ytimg.com/vi/P7e6WoY8E0w/maxresdefault.jpg" />
+            </ion-col>
+            <ion-col size="8">
+
+
+              <ion-list>
+                <ion-item>
+                  <ion-label class="titulo">Inseto</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>cor laraja</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>R$ 34.000</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>1.7 bi turbo </ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>1959 fabricação</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Motor,carroceria</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label>1989 Modelo</ion-label>
+                </ion-item>
+              </ion-list>
+              <ion-button (click)="modal.dismiss()" expand="block">Comfirmar compra</ion-button>
+
+
+
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+
+        <ion-modal #modal trigger="open-modal" [canDismiss]="canDismiss" [presentingElement]="presentingElement">
+          <ng-template>
+            <ion-toolbar>
+              <ion-buttons>
+                <ion-button (click)="modal.dismiss()">Comfirmar</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+            <ion-content class="ion-padding">
+
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
+

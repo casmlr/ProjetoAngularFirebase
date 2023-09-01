@@ -1,0 +1,17 @@
+ion-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  ion-card {
+    height: 100%;
+    transition: transform 0.3s ease; 
+  }
+  
+  
+  ion-card:hover {
+    transform: scale(1.05);
+  }
+  

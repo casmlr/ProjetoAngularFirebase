@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true">
+  <div class="grupo-login" *ngIf="conectado == false">
+    <ion-row class="ion-justify-content-center" >
+        <ion-col size="12" size-lg="3">
+          <ion-card>
+            <ion-item>
+              <ion-label>nome</ion-label>
+              <ion-input [(ngModel)]='login'></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Email</ion-label>
+              <ion-input [(ngModel)]='senha'></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-button (click)="acessar()">acessar</ion-button>
+            </ion-item>
+            <div class="mensagem" *ngIf="login_incorreto == true">
+              <ion-label>Usuario ou senha incorretos!</ion-label>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>  
+  </div>
+</ion-content>
