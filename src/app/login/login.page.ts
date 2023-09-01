@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticateService } from '../services/auth.service';
+import { CrudService } from '../services/crud.service';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-login',
@@ -8,30 +11,20 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  conectado:boolean = false;
-  login:any;
-  senha:any;
-  login_incorreto:boolean=false;
-
+  
   constructor(
+    public _authenticate: AuthenticateService,
+    private _crudService: CrudService,
+    private _message: MessageService,
     public router: Router
   ) { }
-
+    
   ngOnInit() {
   }
 
 
-  acessar(){
- 
-    if(this.login=='1' && this.senha=='1'){
-      this.conectado=true;
-      this.login_incorreto=false;
-      this.router.navigate(['/historia'])
-    } else{
-      this.conectado=false;
-      this.login_incorreto=true;
-    }
-    
+  realizarLogin(dados: any) {
+    this._authenticate.login(dados.email, dados.password);
   }
 
 }

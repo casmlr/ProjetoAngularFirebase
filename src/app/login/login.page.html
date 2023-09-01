@@ -1,24 +1,30 @@
 <ion-content [fullscreen]="true">
-  <div class="grupo-login" *ngIf="conectado == false">
-    <ion-row class="ion-justify-content-center" >
-        <ion-col size="12" size-lg="3">
-          <ion-card>
-            <ion-item>
-              <ion-label>nome</ion-label>
-              <ion-input [(ngModel)]='login'></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label>Email</ion-label>
-              <ion-input [(ngModel)]='senha'></ion-input>
-            </ion-item>
-            <ion-item lines="none">
-              <ion-button (click)="acessar()">acessar</ion-button>
-            </ion-item>
-            <div class="mensagem" *ngIf="login_incorreto == true">
-              <ion-label>Usuario ou senha incorretos!</ion-label>
-            </div>
-          </ion-card>
-        </ion-col>
-      </ion-row>  
+  <div class="grupo-login">
+
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-lg="3">
+        <form #loginForm="ngForm" (ngSubmit)="realizarLogin(loginForm.value)">
+          <ion-item lines="none">
+            <ion-label>Login</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Usuário" name="email" ngModel type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Senha" name="password" ngModel type="password"></ion-input>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-button slot="end" type="submit">
+              <ng-container *ngIf="this._authenticate.isLoading">
+                <ion-spinner></ion-spinner>
+              </ng-container>
+              <ng-container *ngIf="!this._authenticate.isLoading">
+                Login
+              </ng-container>
+            </ion-button>
+          </ion-item>
+        </form>
+      </ion-col>
+    </ion-row>
   </div>
 </ion-content>

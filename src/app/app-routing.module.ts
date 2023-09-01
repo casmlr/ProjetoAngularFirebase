@@ -62,6 +62,10 @@ const routes: Routes = [
   {
     path: 'historia',
     loadChildren: () => import('./historia/historia.module').then( m => m.HistoriaPageModule)
+  },
+  {
+    path: 'confirmar-compra',
+    loadChildren: () => import('./confirmar-compra/confirmar-compra.module').then( m => m.ConfirmarCompraPageModule)
   }
 ];
 

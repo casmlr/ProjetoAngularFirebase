@@ -30,6 +30,7 @@ export class AuthenticateService {
         createUserWithEmailAndPassword(this.auth, email, password)
         .then(() => {
             this._message.show('Conta criada com sucesso! Realize o Login!!!');
+            this._router.navigate(["/login"])
         })
         .catch((_: any) => {
             this.showErro(_, email, password);
@@ -54,6 +55,7 @@ export class AuthenticateService {
         .then((response: any) => {
             console.log(response.user);
             this._message.show('Login Realizado com Sucesso!');
+            this._router.navigate(["/registro"])
         })
         .catch((_: any) => {
             this.showErro(_, email, password);

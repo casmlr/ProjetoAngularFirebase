@@ -1,64 +1,9 @@
-ion-toolbar {
-    --ion-color-light: #fff;
-  }
-  
-  ion-row,
-  ion-col {
-    width: 100%;
-  }
-  
-  
-  ion-title {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  
+
   ion-content {
-    --background: url('https://e1.pxfuel.com/desktop-wallpaper/518/664/desktop-wallpaper-vw-screensavers-volkswagen-fusca.jpg') no-repeat center center / cover;
+    --background: url('https://media.tenor.com/0F-WkOOJScgAAAAd/herbie-volkswagen.gif') no-repeat center center / cover;
   
   }
   
-  ion-card-header {
-    padding: 8px;
-  }
-  
-  ion-card-title {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    color: #fff8f8;
-  }
-  
-  ion-card-subtitle {
-    font-size: 14px;
-    color: #ffffff;
-  }
-  
-  ion-card-content {
-    font-size: 14px;
-    color: #333;
-  }
-  
-  
-  .grupo-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  
-  .mensagem {
-    text-align: center;
-    background-color: rgb(255, 87, 87);
-    border-radius: 4px;
-    padding: 4px;
-    margin: 4px;
-    color: rgb(255, 216, 216);
-    font-weight: bold;
-    font-size: 14px;
-  }
   
   
   ion-button {
@@ -79,5 +24,14 @@ ion-toolbar {
     transform: scale(1.03);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
+
+  .grupo-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
   
  

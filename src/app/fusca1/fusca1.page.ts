@@ -7,43 +7,26 @@ import { IonModal, ActionSheetController } from '@ionic/angular';
   styleUrls: ['./fusca1.page.scss'],
 })
 export class Fusca1Page  {
-  @ViewChild(IonModal) modal!: IonModal;
-  esperar: boolean = true;
-  presentingElement = undefined;
-  message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
-  name: string = '';
-  constructor(private actionSheetCtrl: ActionSheetController) { }
-  cancel() {
-    this.modal.dismiss(null, 'cancel');
-  }
-
-  confirm() {
-    setTimeout(() => {
-      this.esperar = false;
-    }, 2000);
-    this.modal.dismiss(this.name, 'confirm');
-  }
-
-  canDismiss = async () => {
-    const actionSheet = await this.actionSheetCtrl.create({
-      header: 'Quer Fazer a Compra?',
-      buttons: [
-        {
-          text: 'Sim',
-          role: 'confirm',
-        },
-        {
-          text: 'não',
-          role: 'cancel',
-        },
-      ],
-    });
-
-    actionSheet.present();
-
-    const { role } = await actionSheet.onWillDismiss();
-
-    return role === 'confirm';
-  };
-
+  public alertButtons = ['OK'];
+  public alertInputs = [
+    {
+      placeholder: 'Name',
+    },
+    {
+      placeholder: 'Nickname (max 8 characters)',
+      attributes: {
+        maxlength: 8,
+      },
+    },
+    {
+      type: 'number',
+      placeholder: 'Age',
+      min: 1,
+      max: 100,
+    },
+    {
+      type: 'textarea',
+      placeholder: 'A little about yourself',
+    },
+  ];
 }
