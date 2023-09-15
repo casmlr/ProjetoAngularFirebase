@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonModal, ActionSheetController } from '@ionic/angular';
 
 @Component({
@@ -7,42 +8,38 @@ import { IonModal, ActionSheetController } from '@ionic/angular';
   styleUrls: ['./fusca3.page.scss'],
 })
 export class Fusca3Page {
-  @ViewChild(IonModal) modal!: IonModal;
-  esperar: boolean = true;
-  presentingElement = undefined;
-  message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
-  name: string = '';
-  constructor(private actionSheetCtrl: ActionSheetController) { }
-  cancel() {
-    this.modal.dismiss(null, 'cancel');
-  }
-
-  confirm() {
-    setTimeout(() => {
-      this.esperar = false;
-    }, 2000);
-    this.modal.dismiss(this.name, 'confirm');
-  }
-
-  canDismiss = async () => {
-    const actionSheet = await this.actionSheetCtrl.create({
-      header: 'Quer Fazer a Compra?',
-      buttons: [
-        {
-          text: 'Sim',
-          role: 'confirm',
-        },
-        {
-          text: 'não',
-          role: 'cancel',
-        },
-      ],
-    });
-
-    actionSheet.present();
-
-    const { role } = await actionSheet.onWillDismiss();
-
-    return role === 'confirm';
-  };
+  constructor(
+    private router: Router
+  ){}
+  public alertButtons = [
+    {
+      text: 'OK',
+      role: 'confirm',
+      handler: () => {
+        console.log('Alert confirmed');
+        this.router.navigate(['/confirmar-compra']);
+      },
+    },
+  ];
+  public alertInputs = [
+    {
+      placeholder: 'Name',
+    },
+    {
+      placeholder: 'Email',
+      attributes: {
+        maxlength: 8,
+      },
+    },
+    {
+      type: 'number',
+      placeholder: 'Idade',
+      min: 1,
+      max: 100,
+    },
+    {
+      type: 'textarea',
+      placeholder: 'telefone',
+    },
+  ];
 }

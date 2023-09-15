@@ -34,26 +34,19 @@
                   <ion-label>1989 Modelo</ion-label>
                 </ion-item>
               </ion-list>
-              <ion-button (click)="modal.dismiss()" expand="block">Comfirmar compra</ion-button>
-
+              <ion-button  id="present-alert" expand="block">Comfirmar compra</ion-button>
 
 
             </ion-col>
           </ion-row>
         </ion-card-content>
 
-        <ion-modal #modal trigger="open-modal" [canDismiss]="canDismiss" [presentingElement]="presentingElement">
-          <ng-template>
-            <ion-toolbar>
-              <ion-buttons>
-                <ion-button (click)="modal.dismiss()">Comfirmar</ion-button>
-              </ion-buttons>
-            </ion-toolbar>
-            <ion-content class="ion-padding">
-
-            </ion-content>
-          </ng-template>
-        </ion-modal>
+        <ion-alert
+        trigger="present-alert"
+        header="Compra"
+        [buttons]="alertButtons"
+        [inputs]="alertInputs"
+        ></ion-alert>
 
       </ion-card>
     </ion-col>

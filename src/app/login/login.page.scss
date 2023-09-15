@@ -1,4 +1,6 @@
-
+// * {
+//   outline: 1px solid red;
+// }
   ion-content {
     --background: url('https://media.tenor.com/0F-WkOOJScgAAAAd/herbie-volkswagen.gif') no-repeat center center / cover;
   
@@ -16,10 +18,28 @@
     letter-spacing: 1px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+
+  ion-row {
+    width: 100%
+  }
   
   ion-button:hover {
     transform: scale(1.03);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  form{
+    min-width: 400px; 
+  }
+
+  .grupo-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+  }
+  ion-card{
+    border-radius: 15px;
   }
   
   

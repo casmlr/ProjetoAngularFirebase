@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonModal, ActionSheetController } from '@ionic/angular';
 
 @Component({
@@ -7,7 +8,19 @@ import { IonModal, ActionSheetController } from '@ionic/angular';
   styleUrls: ['./fusca1.page.scss'],
 })
 export class Fusca1Page  {
-  public alertButtons = ['OK'];
+  constructor(
+    private router: Router
+  ){}
+  public alertButtons = [
+    {
+      text: 'OK',
+      role: 'confirm',
+      handler: () => {
+        console.log('Alert confirmed');
+        this.router.navigate(['/confirmar-compra']);
+      },
+    },
+  ];
   public alertInputs = [
     {
       placeholder: 'Name',

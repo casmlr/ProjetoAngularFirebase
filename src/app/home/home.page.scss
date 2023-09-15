@@ -1,48 +1,35 @@
-/* Estilos para o contêiner principal */
 .container {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  height: 100vh; /* Define a altura do contêiner para preencher a altura da tela */
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
 }
 
-/* Estilos para ion-col */
-ion-col {
-  background-color: #ffffff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  /* Estilos adicionais para o ion-col, se necessário */
+ion-card {
+  border-radius: 15px;
 }
-
 
 form {
-  display: flex;
-  flex-direction: column;
+  min-width: 400px;
 }
-
 
 ion-item {
   margin-bottom: 15px;
   border: none;
 }
 
-
 ion-label {
-  font-size: 1.5rem;
+  font-size: 2rem !important;
   font-weight: bold;
   color: #333;
 }
 
-
 ion-input {
-  border: 1px solid #000000;
   border-radius: 5px;
   padding: 12px;
   font-size: 1.2rem;
-  color: #333;
-}
 
+}
 
 ion-button {
   --border-radius: 10px;
@@ -54,9 +41,9 @@ ion-button {
   cursor: pointer;
   transition: background 0.3s ease;
   transform: scale(1.03);
-  
+
 }
 
 ion-content {
-  --background: url('https://media.tenor.com/0F-WkOOJScgAAAAd/herbie-volkswagen.gif') no-repeat center center / cover;
+  --background: url('https://media2.giphy.com/media/qT8XPCy5dqjsc/giphy.gif?cid=ecf05e47z4m58jxfvet1jpw9d0xb1hm8f20de89tu7qlmla8&ep=v1_gifs_related&rid=giphy.gif&ct=g') no-repeat center center / cover;
 }

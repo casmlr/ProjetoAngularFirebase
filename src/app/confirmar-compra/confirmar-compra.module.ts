@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ConfirmarCompraPageRoutingModule } from './confirmar-compra-routing.module';
 
 import { ConfirmarCompraPage } from './confirmar-compra.page';
+import { RouterLink } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ConfirmarCompraPageRoutingModule
+    ConfirmarCompraPageRoutingModule,
+    RouterLink
   ],
   declarations: [ConfirmarCompraPage]
 })
