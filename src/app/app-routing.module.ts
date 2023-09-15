@@ -66,6 +66,10 @@ const routes: Routes = [
   {
     path: 'confirmar-compra',
     loadChildren: () => import('./confirmar-compra/confirmar-compra.module').then( m => m.ConfirmarCompraPageModule)
+  },
+  {
+    path: 'cadastrar-veiculo',
+    loadChildren: () => import('./cadastrar-veiculo/cadastrar-veiculo.module').then( m => m.CadastrarVeiculoPageModule)
   }
 ];
 

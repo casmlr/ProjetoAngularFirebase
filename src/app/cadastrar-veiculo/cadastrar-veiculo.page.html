@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>cadastrar-veiculo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12" size-lg="6" class="ion-text-center">
+      <form #cadastrarForm="ngForm" (ngSubmit)="cadastrar(cadastrarForm.value)">
+        <ion-item lines="none">
+          <ion-label>Criar Conta</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Nome" name="nome" ngModel type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Cor" name="cor" ngModel type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Valor" name="valor" ngModel type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Potência" name="potencia" ngModel type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Ano De Fabricação" name="ano_de_fabricacao" ngModel type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Customizar" name="nome" ngModel type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Modelo Ano" name="nome" ngModel type="text"></ion-input>
+        </ion-item>
+          <ion-input label="Imagem" name="imagem" ngModel type="hidden" value="{{ this.imagem }}"></ion-input>
+        
+        
+            <ion-item>
+              <input type="file" value="Upload" (change)="memorizarArquivo($event)">
+            </ion-item>
+            <ion-item>
+              <ion-button color="medium" slot="end" size="small" (click)="fazerUpload()">Salvar Imagem</ion-button>
+            </ion-item>
+            <ion-item>
+              <img src="{{ this.imagem }}">
+            </ion-item>
+       
+        <ion-item lines="none">
+          <ion-button color="primary" slot="end" type="submit">Cadastrar</ion-button>
+        </ion-item>
+      </form>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
