@@ -7,14 +7,10 @@ ion-toolbar {
     width: 100%;
   }
   
-  
   ion-title {
     font-size: 20px;
     font-weight: bold;
   }
-  
-  
-  
   
   ion-card-header {
     padding: 8px;
@@ -110,37 +106,13 @@ ion-toolbar {
     min-height: 600px;
   }
 
-  .imagem1 {
-    background: #aaaaaa url('https://quatrorodas.abril.com.br/wp-content/uploads/2020/12/C0494CFB-8C4D-4C63-9C5F-6E9B0A0D790E.jpeg?quality=70&strip=info') no-repeat center center / cover !important;
+  ion-label {
+    color: black;
   }
 
-  .imagem2 {
-    background: #aaaaaa url('https://motorshow.com.br/wp-content/uploads/sites/2/2018/12/kathleen_brooks_1967_annie_beetle-small-9197.jpg') no-repeat center center / cover !important;
-  }
-
-  .imagem3 {
-    background: #aaaaaa url('https://fotos.jornaldocarro.estadao.com.br/uploads/2018/06/30151604/41545551-1160x773.jpg') no-repeat center center / cover !important;
-  }
-
-  .imagem4 {
-    background: #aaaaaa url('https://ateliedocarro.com.br/wp-content/uploads/2019/06/Fusca-1600-76-Amarelo-Imperial-30.jpeg') no-repeat center center / cover !important;
-  }
-  .imagem5 {
-    background: #aaaaaa url('https://motortudo.com/wp-content/uploads/2020/12/VW-Fusca-1500-1974-carros-populares-antigos-2.jpg') no-repeat center center / cover !important;
-  }
-  .imagem6 {
-    background: #aaaaaa url('https://i.pinimg.com/originals/e3/e3/13/e3e31364b4befa1c3a15582330d5837d.jpg') no-repeat center center / cover !important;
-  }
-  .imagem7 {
-    background: #aaaaaa url('https://i0.wp.com/www.autocustom.com.br/wp-content/uploads/2016/10/fusca-laranja-rebaixado-vintage-cambagem-negativa-10-encontro-antigos-jataizinho.jpg?fit=1280%2C853&ssl=1') no-repeat center center / cover !important;
-  }
-  .imagem8 {
-    background: #aaaaaa url('https://cdn.carrosp.com.br/img/6/full/volkswagen-fusca-1975-santa-barb-f1543d591104a3435d63aefe5237014f.jpg') no-repeat center center / cover !important;
-  }
-  .imagem9 {
-    background: #aaaaaa url('https://i.pinimg.com/originals/21/d1/e6/21d1e6e8e47ec564f3130ddaf3c0c346.jpg') no-repeat center center / cover !important;
-  }
-
+.card-detalhe {
+  background-color: rgb(255, 255, 255);
+}
 
 
 
