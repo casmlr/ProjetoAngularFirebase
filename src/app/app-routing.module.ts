@@ -70,6 +70,10 @@ const routes: Routes = [
   {
     path: 'cadastrar-veiculo',
     loadChildren: () => import('./cadastrar-veiculo/cadastrar-veiculo.module').then( m => m.CadastrarVeiculoPageModule)
+  },
+  {
+    path: 'detalhes-veiculo',
+    loadChildren: () => import('./detalhes-veiculo/detalhes-veiculo.module').then( m => m.DetalhesVeiculoPageModule)
   }
 ];
 
