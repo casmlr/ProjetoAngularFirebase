@@ -8,15 +8,28 @@
 }
 
 ion-card {
-  width: 758px;
-  height: 446px;
+  height: 500px;
   border-radius: 15px;
+
 }
-.titulo{
+.conteudo{
+  padding-right: 15px;
+}
+
+.titulo {
   color: #050505;
-  font-family: Inter;
+  font-family: 'Roboto Slab', serif;
   font-size: 34px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.auto{
+  height: auto;
+}
+ion-item{
+  --background: none;
+}
+ion-content {
+  --background: aliceblue;
 }

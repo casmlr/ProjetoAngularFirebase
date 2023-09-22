@@ -20,6 +20,9 @@ export class DetalhesVeiculoPage {
   ){
     this.veiculo = JSON.parse(String(localStorage.getItem('veiculo')));
   }
+  cadastrar(dados:any){
+    console.log(dados)
+  }
 
   public alertButtons = [
     {

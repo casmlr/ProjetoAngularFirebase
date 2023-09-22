@@ -1,41 +1,50 @@
-<ion-content [fullscreen]="true">
+<ion-content  [fullscreen]="true">
   <ion-row class="margem">
-    <ion-col  class="altura"size="12" [ngStyle]="{'background': ' url('+ veiculo.imagem +') no-repeat center center / cover'}">
+    <ion-col class="altura" size="12"
+      [ngStyle]="{'background': ' url('+ veiculo.imagem +') no-repeat center center / cover'}">
     </ion-col>
   </ion-row>
 
   <ion-row>
-    <ion-col>
+    <ion-col size="8" class="conteudo">
       <ion-card>
         <ion-card-content>
-          <ion-row>
-            <ion-col size="8">
+          <ion-row class="ion-justify-content-center">
+            <ion-col size="12">
 
 
               <ion-list>
+
+                <ion-item lines="none">
+                  <ion-label>
+                    <h1 class="titulo">VOLKSWAGEN FUSCA</h1>
+
+                  </ion-label>
+                </ion-item>
                 <ion-item lines="none">
                   <ion-label class="titulo">{{ this.veiculo.nome }}</ion-label>
                 </ion-item>
                 <ion-item lines="none">
-                  <ion-label>{{ this.veiculo.cor }}</ion-label>
+                  <ion-label>
+                    <h1>cor</h1>
+                    <h6>{{ this.veiculo.cor }}</h6>
+                  </ion-label>
                 </ion-item>
                 <ion-item lines="none">
-                  <ion-label>{{ this.veiculo.valor }}</ion-label>
+                  <ion-label>
+                    <h1>Potencia</h1>
+                    <h6>{{ this.veiculo.potencia }}</h6>
+                  </ion-label>
                 </ion-item>
                 <ion-item lines="none">
-                  <ion-label>{{ this.veiculo.potencia }}</ion-label>
+                  <ion-label>
+                    <h1>Ano de Fabricação</h1>
+                    <h6>{{ this.veiculo.ano_de_fabricacao }}</h6>
+                  </ion-label>
                 </ion-item>
-                <ion-item lines="none">
-                  <ion-label>{{ this.veiculo.ano_de_fabricacao }}</ion-label>
-                </ion-item>
-                <ion-item lines="none">
-                  <ion-label>Motor</ion-label>
-                </ion-item>
-                <ion-item lines="none">
-                  <ion-label>{{ this.veiculo.ano_de_fabricacao }}</ion-label>
-                </ion-item>
+
               </ion-list>
-              
+
 
             </ion-col>
           </ion-row>
@@ -46,12 +55,41 @@
 
       </ion-card>
     </ion-col>
-  </ion-row>
 
-  <ion-row>
-    <ion-col class="registro">
-      <ion-button id="present-alert" expand="block">Comfirmar compra</ion-button>
+    <ion-col size="4">
+      <ion-card class="auto">
+        <ion-card-content>
+          
+           <ion-item lines="none">
+          <ion-label class="titulo">{{ this.veiculo.valor }}</ion-label>
+        </ion-item>
+
+        <form #formCadastro="ngForm" (ngSubmit)="cadastrar(formCadastro.value)">
+          <ion-item lines="none">
+            <ion-input label="Nome" name="nome" ngModel></ion-input>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-label>Email</ion-label>
+            <ion-input label="E-mail" name="email" ngModel></ion-input>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-label>Telefone</ion-label>
+            <ion-input label="Telefone" name="telefone" ngModel></ion-input>
+
+          </ion-item>
+          <ion-button expand="block" type="submit">Comfirmar compra</ion-button>
+        </form>
+        </ion-card-content>
+       
+
+
+
+
+
+
+      </ion-card>
     </ion-col>
+
   </ion-row>
 </ion-content>
 
