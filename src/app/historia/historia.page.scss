@@ -56,22 +56,17 @@ ion-toolbar {
   ion-button {
     --color: #ffffff;
     --background: linear-gradient(to right, #00bfff, #00ffd5);
-    --padding-top: 6px;
-    --padding-bottom: 6px;
+    --padding-top: 4px;
+    --padding-bottom: 4px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 15px;
+    border-radius: 15px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     letter-spacing: 1px;
     
 
   }
-  
-  ion-button:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-  
   ion-card {
     margin: 10px;
     padding: 0;

@@ -5,7 +5,9 @@
       <ion-col size="12">
         <ion-card>
           <ion-card-header>
-            <ion-card-title><h1>História do Fusca</h1></ion-card-title>
+            <ion-card-title>
+              <h1>História do Fusca</h1>
+            </ion-card-title>
             <ion-row class="ion-justify-content-center">
               <ion-col size="4">
                 <ion-button routerLink="/fotos" expand="full">Fotos</ion-button>
@@ -20,36 +22,27 @@
           </ion-card-header>
         </ion-card>
       </ion-col>
-      <!-- <ion-row class="ion-justify-content-center">
-        <ion-col size="12">
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>História do Fusca</ion-card-title>
-              <ion-button routerLink="/fotos">Fotos</ion-button>
-              <ion-button routerLink="/cadastrar-veiculo">Cadastrar seu veiculo</ion-button>
-              <ion-button routerLink="/registro">voltar</ion-button>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-      </ion-row> -->
 
       <ion-row class="ion-justify-content-center">
         <ion-col size="12">
           <ion-row>
             <ng-container *ngFor="let veiculo of this.veiculos">
               <ion-col size="12" size-lg="6">
-                <ion-card 
-                  (click) = 'exibir(veiculo)' 
-                  routerLink="/fusca1">
+                <ion-card (click)='exibir(veiculo)' routerLink="/fusca1">
                   <img src="{{ veiculo.imagem }}" class="imagem-fusca" />
                   <ion-card-header>
                     <ion-card-title>{{this.veiculo.nome}}</ion-card-title>
                     <ion-card-subtitle>{{this.veiculo.valor}}</ion-card-subtitle>
                   </ion-card-header>
-                
-                  
+
+
                 </ion-card>
-                <!-- <ion-card
+
+              </ion-col>
+            </ng-container>
+
+
+            <!-- <ion-card
                   (click) = 'exibir(veiculo)'
                   class="imagem-fusca" 
                   routerLink="/fusca1"
@@ -68,9 +61,19 @@
                   </ion-row>
 
                 </ion-card> -->
-              </ion-col>
-            </ng-container>
 
+            <!-- <ion-row class="ion-justify-content-center">
+        <ion-col size="12">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>História do Fusca</ion-card-title>
+              <ion-button routerLink="/fotos">Fotos</ion-button>
+              <ion-button routerLink="/cadastrar-veiculo">Cadastrar seu veiculo</ion-button>
+              <ion-button routerLink="/registro">voltar</ion-button>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row> -->
 
             <!-- <ion-col size="12" size-lg="6">
               <ion-card class="imagem-fusca imagem1" routerLink="/fusca1"></ion-card>
