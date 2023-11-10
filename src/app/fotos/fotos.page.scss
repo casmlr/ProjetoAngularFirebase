@@ -12,6 +12,11 @@ ion-card img {
   
   
   ion-card:hover {
-    transform: scale(1.05);
+    // transform: scale(1.05);
+    outline: 1px solid red;
+  }
+
+  .espaso{
+    padding: 70px;
   }
   
