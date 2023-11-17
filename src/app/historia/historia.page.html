@@ -1,5 +1,5 @@
-<ion-content [fullscreen]="true">
-  <!-- CONECTADO -->
+<!-- <ion-content [fullscreen]="true">
+  
   <ion-row class="ion-justify-content-center">
     <ion-col size="12">
       <ion-col size="12">
@@ -7,6 +7,7 @@
           <ion-card-header>
             <ion-card-title>
               <h1>História do Fusca</h1>
+
             </ion-card-title>
             <ion-row class="ion-justify-content-center">
               <ion-col size="5" class="ion-text-center">
@@ -46,74 +47,6 @@
             </ng-container>
 
 
-            <!-- <ion-card
-                  (click) = 'exibir(veiculo)'
-                  class="imagem-fusca" 
-                  routerLink="/fusca1"
-                  [ngStyle]="{'background': ' url('+ veiculo.imagem +') no-repeat center center / cover'}"
-                  >
-                  
-                  <ion-row>
-                    <ion-col>
-                      <ion-card>
-                        <ion-card-header>
-                          <ion-card-title>{{this.veiculo.nome}}</ion-card-title>
-                          <ion-card-subtitle>{{this.veiculo.valor}}</ion-card-subtitle>
-                        </ion-card-header>
-                      </ion-card>
-                    </ion-col>
-                  </ion-row>
-
-                </ion-card> -->
-
-            <!-- <ion-row class="ion-justify-content-center">
-        <ion-col size="12">
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>História do Fusca</ion-card-title>
-              <ion-button routerLink="/fotos">Fotos</ion-button>
-              <ion-button routerLink="/cadastrar-veiculo">Cadastrar seu veiculo</ion-button>
-              <ion-button routerLink="/registro">voltar</ion-button>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-      </ion-row> -->
-
-            <!-- <ion-col size="12" size-lg="6">
-              <ion-card class="imagem-fusca imagem1" routerLink="/fusca1"></ion-card>
-            </ion-col>
-
-            <ion-col size="12" size-lg="6">
-              <ion-card class="imagem-fusca imagem2" routerLink="/fusca2"></ion-card>
-            </ion-col>
-
-            <ion-col size="12" size-lg="6">
-              <ion-card class="imagem-fusca imagem3" routerLink="/fusca3"></ion-card>
-            </ion-col>
-
-            <ion-col size="12" size-lg="6">
-             <ion-card class="imagem-fusca imagem4" routerLink="/fusca4"></ion-card>
-            </ion-col>
-
-            <ion-col size="12" size-lg="6">
-              <ion-card class="imagem-fusca imagem5" routerLink="/fusca5"></ion-card>
-            </ion-col>
-
-            <ion-col size="12" size-lg="6">
-              <ion-card class="imagem-fusca imagem6" routerLink="/fusca6"></ion-card>
-            </ion-col>
-
-            <ion-col size="12" size-lg="6">
-              <ion-card class="imagem-fusca imagem7" routerLink="/fusca7"></ion-card>
-            </ion-col>
-
-            <ion-col size="12" size-lg="6">
-              <ion-card class="imagem-fusca imagem8" routerLink="/fusca8"></ion-card>
-            </ion-col>
-
-            <ion-col size="12" size-lg="6">
-              <ion-card class="imagem-fusca imagem9" routerLink="/fusca9"></ion-card>
-            </ion-col> -->
 
           </ion-row>
 
@@ -121,4 +54,88 @@
       </ion-row>
     </ion-col>
   </ion-row>
+</ion-content> -->
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Loja de Fuscas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8">
+        <!-- Conteúdo da Página -->
+        <ion-list>
+          <!-- Fusca 1 -->
+          <ng-container *ngFor="let veiculo of this.veiculos">
+            <ion-item class="carro">
+              <ion-thumbnail slot="start">
+                <img src="{{ veiculo.imagem }}" />
+              </ion-thumbnail>
+              <ion-label>
+                <h2>Nome: {{this.veiculo.nome}}</h2>
+                <p>Ano: {{this.veiculo.ano_fabricacao}}</p>
+                <p>Modelo: {{this.veiculo.modelo}}</p>
+                <p>Cor: {{this.veiculo.cor}}</p>
+                <p>Preço: R$ {{this.veiculo.valor}}</p>
+                <ion-button color="primary" (click)='exibir(veiculo)'>Selecionar</ion-button>
+              </ion-label>
+            </ion-item>
+
+            
+              <!-- <ion-card (click)='exibir(veiculo)' routerLink="/fusca1">
+                <img src="{{ veiculo.imagem }}" class="imagem-fusca" />
+                <ion-card-header>
+                  <ion-card-title>{{this.veiculo.nome}}</ion-card-title>
+                  <ion-card-subtitle>{{this.veiculo.valor}}</ion-card-subtitle>
+                </ion-card-header>
+              </ion-card> -->
+          </ng-container>
+
+          <!-- Fusca 2 -->
+          <ion-item class="carro">
+            <ion-thumbnail slot="start">
+              <img src="caminho_para_a_imagem_do_fusca2.jpg" alt="Fusca 1600">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>Fusca 1600</h2>
+              <p>Ano: 1975</p>
+              <p>Cor: Vermelho</p>
+              <p>Preço: R$ 18.000,00</p>
+              <ion-button color="primary">Adicionar ao Carrinho</ion-button>
+            </ion-label>
+          </ion-item>
+
+          <!-- Adicione mais Fuscas conforme necessário -->
+        </ion-list>
+      </ion-col>
+
+      <!-- Barra Lateral -->
+      <ion-col size="4">
+        <ion-list>
+          <!-- Ion Item 1 -->
+          <ion-item>
+            <ion-label>Huey</ion-label>
+          </ion-item>
+
+          <!-- Ion Item 2 -->
+          <ion-item>
+            <ion-label>Dewey</ion-label>
+          </ion-item>
+
+          <!-- Ion Item 3 -->
+          <ion-item>
+            <ion-label>Louie</ion-label>
+          </ion-item>
+
+          <!-- Ion Item 4 -->
+          <ion-item>
+            <ion-label>Fooie</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
