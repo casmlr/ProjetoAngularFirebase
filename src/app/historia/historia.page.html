@@ -56,6 +56,16 @@
   </ion-row>
 </ion-content> -->
 
+
+
+<!-- <ion-card (click)='exibir(veiculo)' routerLink="/fusca1">
+                <img src="{{ veiculo.imagem }}" class="imagem-fusca" />
+                <ion-card-header>
+                  <ion-card-title>{{this.veiculo.nome}}</ion-card-title>
+                  <ion-card-subtitle>{{this.veiculo.valor}}</ion-card-subtitle>
+                </ion-card-header>
+              </ion-card> -->
+
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Loja de Fuscas</ion-title>
@@ -72,7 +82,7 @@
           <ng-container *ngFor="let veiculo of this.veiculos">
             <ion-item class="carro">
               <ion-thumbnail slot="start">
-                <img src="{{ veiculo.imagem }}" />
+                <img src="{{ veiculo.imagem }}" class="imagem-fusca" />
               </ion-thumbnail>
               <ion-label>
                 <h2>Nome: {{this.veiculo.nome}}</h2>
@@ -84,19 +94,12 @@
               </ion-label>
             </ion-item>
 
-            
-              <!-- <ion-card (click)='exibir(veiculo)' routerLink="/fusca1">
-                <img src="{{ veiculo.imagem }}" class="imagem-fusca" />
-                <ion-card-header>
-                  <ion-card-title>{{this.veiculo.nome}}</ion-card-title>
-                  <ion-card-subtitle>{{this.veiculo.valor}}</ion-card-subtitle>
-                </ion-card-header>
-              </ion-card> -->
+
           </ng-container>
 
           <!-- Fusca 2 -->
           <ion-item class="carro">
-            <ion-thumbnail slot="start">
+            <ion-thumbnail>
               <img src="caminho_para_a_imagem_do_fusca2.jpg" alt="Fusca 1600">
             </ion-thumbnail>
             <ion-label>
@@ -115,25 +118,15 @@
       <!-- Barra Lateral -->
       <ion-col size="4">
         <ion-list>
-          <!-- Ion Item 1 -->
-          <ion-item>
-            <ion-label>Huey</ion-label>
-          </ion-item>
-
-          <!-- Ion Item 2 -->
-          <ion-item>
-            <ion-label>Dewey</ion-label>
-          </ion-item>
-
-          <!-- Ion Item 3 -->
-          <ion-item>
-            <ion-label>Louie</ion-label>
-          </ion-item>
-
-          <!-- Ion Item 4 -->
-          <ion-item>
-            <ion-label>Fooie</ion-label>
-          </ion-item>
+          <ion-col size="6" class="ion-text-center" >
+            <ion-button routerLink="/registro" expand="full" color="primary">Voltar</ion-button>
+          </ion-col>
+          <ion-col size="6" class="ion-text-center">
+            <ion-button routerLink="/fotos" expand="full" color="primary">Fotos</ion-button>
+          </ion-col>
+          <ion-col size="6" class="ion-text-center">
+            <ion-button routerLink="/cadastrar-veiculo" expand="full" color="primary">Cadastrar seu veiculo</ion-button>
+          </ion-col>
         </ion-list>
       </ion-col>
     </ion-row>
